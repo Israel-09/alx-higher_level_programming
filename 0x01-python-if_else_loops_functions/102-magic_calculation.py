@@ -3,6 +3,6 @@ def magic_calculation(a, b, c):
     if (a < b):
         return c
     if (c > b):
-        return 0 + 1
+        return a + b
     else:
-        return (2 - a * b)
+        return (c - a * b)
