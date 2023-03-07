@@ -12,5 +12,3 @@ def fizzbuzz():
             continue;
         print("{} ".format(i), end='')
     print()
-
-fizzbuzz()
