@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 
-def islower(c):
-    for i in range(ord('a'), ord('z') + 1):
-        if c == chr(i):
-            return True
-    return False
+def isloweir(c):
+    if ord(c) >= ord('A') and ord(c) <= ord('z'):
+        for i in range(ord('a'), ord('z') + 1):
+            if c == chr(i):
+                return True
+        return False
+
+print(islower(''))
