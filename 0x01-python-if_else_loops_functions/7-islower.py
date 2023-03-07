@@ -6,5 +6,3 @@ def isloweir(c):
             if c == chr(i):
                 return True
         return False
-
-print(islower(''))
