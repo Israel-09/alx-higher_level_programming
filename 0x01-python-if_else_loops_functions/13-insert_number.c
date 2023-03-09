@@ -25,7 +25,6 @@ listint_t *insert_node(listint_t **head, int number)
 
 	}
 	current = *head;
-	printf("%d\n", i);
 	while(current->next)
 	{
 		if (j == i - 1)
