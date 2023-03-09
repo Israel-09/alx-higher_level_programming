@@ -5,13 +5,14 @@
 /**
  * index_l - returns the index of the ordered list
  * that number fits into
- * @current: is the head of the list
+ * @head: is the head of the list
  * @number: a number
  * Return: the index of the list otherwise -1 when
  * number is greatest
  */
-int index_l(listint_t *current, int number)
+int index_l(listint_t **head, int number)
 {
+	listint_t *current = *head;
 	int i = 0;
 
 	while (current->next)
@@ -24,6 +25,26 @@ int index_l(listint_t *current, int number)
 	return (-1);
 }
 
+listint_t *add_node_head(listint_t **head, int number)
+{
+	listint_t * new_node;
+	
+	new_node = malloc(sizeof(listint_t));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->n = number;
+
+	if ((*head) == NULL)
+	{
+		new_node->next = NULL;
+		*head = new_node;
+		return (new_node);
+	}
+	new_node->next = (*head)->next;
+	*head = new_node;
+	return (new_node);
+}
+
 /**
  * insert_node - insert a number in a sorted linked list
  * @head: head of the list
@@ -33,36 +54,37 @@ int index_l(listint_t *current, int number)
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *current, *temp;
+	listint_t *temp, *current = *head;
 	int i = 0, j = 0;
-
+	
 	if (!(*head))
-		return (NULL);
+	{
+		temp = add_nodeint_end(head, number);
+		return (temp);
+	}
+	i = index_l(head, number);
+	printf("\nright here i %d\n", i);
+	if (i == 0)
+	{
+		temp = add_node_head(head, number);
+		return (temp);
+	}
+	if (i == -1)
+	{
+		temp = add_nodeint_end(head, number);
+		return (temp);
+	}
 	current = *head;
-
-	i = index_l(current, number);
-	current = *head;
-	temp = malloc(sizeof(listint_t));
-	if (temp == NULL)
-		return (NULL);
-	temp->n = number;
+	printf("\nright here i %d\n", i);
 	while (current->next)
 	{
-		if (i == 0)
-		{
-			temp->next = (*head)->next;
-			(*head) = temp;
-			return (temp);
-
-		}
-		if (i == -1)
-		{
-			free(temp);
-			temp = add_nodeint_end(head, number);
-			return (temp);
-		}
+		printf("\nright here i %d\n", i);
 		if (j == i - 1)
 		{
+			temp = malloc(sizeof(listint_t));
+			if (temp == NULL)
+				return (NULL);
+			temp->n = number;
 			temp->next = current->next;
 			current->next = temp;
 			return (temp);
