@@ -14,8 +14,14 @@ def add_tuple(tuple_a=(0, 0), tuple_b=(0, 0)):
         while (i < len(tuple_b) and i < 2):
             b[i] = tuple_b[i]
             i += 1
-    print(b)
-    print(a)
     first = a[0] + b[0]
     second = a[1] + b[1]
     return first, second
+
+tuple_a = (1, 89)
+tuple_b = (88, 11)
+new_tuple = add_tuple(tuple_a, tuple_b)
+print(new_tuple)
+
+print(add_tuple(tuple_a, (1, )))
+print(add_tuple(tuple_a, ()))
