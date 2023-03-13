@@ -8,6 +8,10 @@ void print_python_list_info(PyObject *p)
 /*	Py_ssize_t len;
 
 	len = PyList_Size(p);*/
-	printf("Hello: %li\n", PyList_GET_SIZE(p));
-	printf("Hello: %li\n", PyList_Size(p));
+	PyTypeObject *type = Py_TYPE(p);
+	Py_buffer *buff;
+	
+	printf("Hello: %s\n", type->tp_name);
+	printf("Hello: %li\n", Py_SIZE(p));
+	printf("Hello: %li\n", buff->itemsize);
 }
