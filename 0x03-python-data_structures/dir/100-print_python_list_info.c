@@ -5,13 +5,11 @@
 
 void print_python_list_info(PyObject *p)
 {
-/*	Py_ssize_t len;
 
-	len = PyList_Size(p);*/
-	PyTypeObject *type = Py_TYPE(p);
-	Py_buffer *buff;
+/*	PyTypeObject *type = Py_TYPE(p);
+	to get each item type*/
+	PyListObject *obj = (PyListObject *)p;
 	
-	printf("Hello: %s\n", type->tp_name);
-	printf("Hello: %li\n", Py_SIZE(p));
-	printf("Hello: %li\n", buff->itemsize);
+	printf("[*] Size of the Python List = %li\n", Py_SIZE(p));
+	printf("[*] Allocated = %li\n", obj->allocated);
 }
