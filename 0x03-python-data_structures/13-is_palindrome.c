@@ -13,10 +13,10 @@ int is_palindrome(listint_t **head)
 	int size = 1;
 	int j, i;
 	int *array;
+	listint_t *current = *head;
 
 	if (!head)
 		return (1);
-	listint_t *current = *head;
 
 	while (current->next)
 	{
@@ -40,7 +40,6 @@ int is_palindrome(listint_t **head)
 			current = current->next;
 			if (size % 2 != 0)
 			{
-				printf("i = %i, j = %i\n", i, j);
 				if (current->n != array[j])
 					return (0);
 			}
