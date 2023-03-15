@@ -35,13 +35,19 @@ int is_palindrome(listint_t **head)
 		if (i >= (size / 2))
 		{
 			if (current->n != array[j] && size % 2 == 0)
+			{
+				free(array);
 				return (0);
+			}
 			i++;
 			current = current->next;
 			if (size % 2 != 0)
 			{
 				if (current->n != array[j])
+				{
+					free(array);
 					return (0);
+				}
 			}
 			j--;
 			continue;
@@ -50,5 +56,6 @@ int is_palindrome(listint_t **head)
 		current = current->next;
 		j = i - 1;
 	}
+	free(array);
 	return (1);
 }
