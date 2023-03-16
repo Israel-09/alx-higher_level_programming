@@ -9,6 +9,8 @@ def placeholder(place={}, string=''):
         if string.find(k) >= 0:
             temp_num = v
             temp_key = k
+            if k == 'IV' or k == 'XL' or k == 'CD':
+                break
             continue
     num += temp_num
     new_str = string.replace(temp_key, '')
