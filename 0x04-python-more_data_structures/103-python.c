@@ -15,7 +15,7 @@ void print_python_list(PyObject *p)
 	PyListObject *item;
 	len = obj->ob_base.ob_size;
 
-	printf("[.] Python list info\n");
+	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %li\n", len);
 	printf("[*] Allocated = %li\n", obj->allocated);
 	for (i = 0; i < len; i++)
@@ -52,7 +52,7 @@ void print_python_bytes(PyObject *p)
 	for (i = 0; i < 10; i++)
 	{
 		
-		if (i == size + 1)
+		if (i == size)
 		{
 			printf("%02x\n", obj->ob_sval[i]);
 			return;
