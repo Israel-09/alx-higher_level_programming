@@ -52,7 +52,7 @@ void print_python_bytes(PyObject *p)
 	for (i = 0; i < 10; i++)
 	{
 		
-		if (i == size)
+		if (i == size || i == 9)
 		{
 			printf("%02x\n", obj->ob_sval[i]);
 			return;
