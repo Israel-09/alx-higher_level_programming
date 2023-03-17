@@ -2,11 +2,9 @@
 
 
 def complex_delete(a_dictionary, value):
-    if not a_dictionary:
+    if not a_dictionary or a_dictionary is None:
         return None
     key_list = list(a_dictionary.keys())
-    if len(key_list) == 0 and value >= len(key_list):
-        return None
     for k in key_list:
         if a_dictionary.get(k) == value:
             del a_dictionary[k]
