@@ -10,7 +10,6 @@
 void print_python_float(PyObject *p)
 {
 	PyFloatObject *obj = (PyFloatObject *)p;
-	int i, mul = 10;
 	double value;
 
 
@@ -22,27 +21,7 @@ void print_python_float(PyObject *p)
 		return;
 	}
 	value = obj->ob_fval;
-	while (value > 0)
-		value = value / 10;
-	while (i != 0)
-	{
-		i = (int)(value * mul) % 10;
-		printf("%d", i);
-		if (mul == 10)
-		{
-			printf("%i.", i);
-		}
-		else
-		{
-			if (mul == 100 && i == 0)
-			{
-				putchar('0');
-			}
-			putchar(i);
-		}
-		mul *= 10
-	}
-	putchar('\n');
+	printf("  value: %g\n", value);
 }
 
 /**
