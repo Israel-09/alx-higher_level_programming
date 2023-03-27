@@ -8,10 +8,12 @@ some examples of errors in python programming are as follows:
 among many other
 
 ## Syntax
+```
 try:
 	block of code
 except {exception}:
 	block of code
+```
 ```
 try:
 	my_list = [1, 2, 3, 4, 5]
