@@ -1,21 +1,20 @@
 #!/usr/bin/python3
 import sys
 
+
 def safe_function(fct, *args):
-    c = 0
     try:
-        c = fct(args[0], args[1])
+        result = fct(args[0], args[1])
 
     except (ValueError, TypeError) as me:
         sys.stderr.write('Exception: ' + str(me) + '\n')
-        c = None
+        result = None
 
     except ZeroDivisionError as me:
-        c = None
+        result = None
         sys.stderr.write('Exception: ' + str(me) + '\n')
 
     except IndexError as me:
-        c = None
+        result = None
         sys.stderr.write('Exception: ' + str(me) + '\n')
-
-    return c
+    return result
