@@ -59,7 +59,7 @@ class Square:
         """prints a suare using #"""
         ssize = self.__size
         space_cnt = self.__position[0]
-        if self.__position[1] > 1:
+        if self.__position[1] > 0:
             space_cnt = 0
         if ssize == 0:
             print()
