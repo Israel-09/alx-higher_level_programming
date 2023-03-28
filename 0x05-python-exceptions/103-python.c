@@ -26,7 +26,7 @@ void print_python_float(PyObject *p)
 		value = value / 10;
 	while (i != 0)
 	{
-		i = (int)(value * mul) % 10;
+		i = (value * mul) % 10;
 		printf("%d", i);
 		if (mul == 10)
 		{
@@ -40,7 +40,7 @@ void print_python_float(PyObject *p)
 			}
 			putchar(i);
 		}
-		mul *= 10
+		mul *= 10;
 	}
 	putchar('\n');
 }
