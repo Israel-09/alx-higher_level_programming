@@ -10,6 +10,7 @@ class Square:
 
         Args:
             size: size of the square
+            position: coordinate of square
         """
         self.__size = size
         if type(position) is not tuple or len(position) != 2:
