@@ -6,6 +6,7 @@ from math import pi
 class MagicClass:
     """Define a circle with its properties and methods"""
     def __init__(self, radius):
+        self.__radius = 0
         """defines the attribute of a MagicClass object
 
         Args:
@@ -16,7 +17,8 @@ class MagicClass:
         """
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
-        self.__radius = radius
+        else:
+            self.__radius = radius
 
     def area(self):
         """area defines the area occupied by a MagicClass object
@@ -24,7 +26,7 @@ class MagicClass:
         Returns:
             The area of a MagicClass Object
         """
-        return (pi * (self.__radius ** 2))
+        return (self.__radius ** 2 * pi)
 
     def circumference(self):
         """circumference defines the distance round a MagicClass object
