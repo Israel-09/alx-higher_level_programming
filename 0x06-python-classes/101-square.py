@@ -67,14 +67,15 @@ class Square:
         square = ''
         if ssize == 0:
             square += '\n'
-        else:
-            for i in range(self.__position[1]):
-                square += '\n'
-            for i in range(ssize):
-                for k in range(space_cnt):
-                    square += ' '
-                for j in range(ssize):
-                    square += '#'
+            return square
+        for i in range(self.__position[1]):
+            square += '\n'
+        for i in range(ssize):
+            for k in range(space_cnt):
+                square += ' '
+            for j in range(ssize):
+                square += '#'
+            if i < ssize - 1:
                 square += '\n'
         return square
 
