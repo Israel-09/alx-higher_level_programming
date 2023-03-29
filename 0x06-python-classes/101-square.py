@@ -60,18 +60,26 @@ class Square:
         """
         return self.__size ** 2
 
-    def my_print(self):
+    def print_fun(self):
         """prints a suare using #"""
         ssize = self.__size
         space_cnt = self.__position[0]
+        square = ''
         if ssize == 0:
-            print()
+            square += '\n'
         else:
             for i in range(self.__position[1]):
-                print()
+                square += '\n'
             for i in range(ssize):
                 for k in range(space_cnt):
-                    print(' ', end='')
+                    square += ' '
                 for j in range(ssize):
-                    print('{}'.format('#'), end='')
-                print()
+                    square += '#'
+                square += '\n'
+        return square
+
+    def my_print(self):
+        print(self.print_fun())
+
+    def __repr__(self):
+        return self.print_fun()
