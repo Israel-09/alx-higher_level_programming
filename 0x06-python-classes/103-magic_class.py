@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""Magic class defination"""
 from math import pi
 
 
 class MagicClass:
+    """Define a circle with its properties and methods"""
     def __init__(self, radius):
         """defines the attribute of a MagicClass object
 
