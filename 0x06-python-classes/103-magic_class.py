@@ -5,8 +5,7 @@ from math import pi
 
 class MagicClass:
     """Define a circle with its properties and methods"""
-    def __init__(self, radius):
-        self.__radius = 0
+    def __init__(self, radius=0):
         """defines the attribute of a MagicClass object
 
         Args:
@@ -15,6 +14,7 @@ class MagicClass:
         Raise:
             Exception TypeError: if raius is not a number
         """
+        self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
         else:
