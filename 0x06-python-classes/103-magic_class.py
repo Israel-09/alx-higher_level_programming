@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 from math import pi
 
+
 class MagicClass:
     def __init__(self, radius):
         """defines the attribute of a MagicClass object
-        
+
         Args:
             radius: radius of the object
 
