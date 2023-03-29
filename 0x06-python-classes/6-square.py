@@ -79,7 +79,5 @@ class Square:
         return square
 
     def my_print(self):
-        print(self.print_fun())
-
-    def __repr__(self):
-        return self.print_fun()
+        s = self.print_fun()
+        print(s)
