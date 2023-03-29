@@ -13,6 +13,30 @@ class Square:
         """
         self.__size = size
 
+    def __lt__(self, other):
+        """compares if area of self is less than other"""
+        return self.area() < other.area()
+
+    def __gt__(self, other):
+        """compares if area of self is greater than other"""
+        return self.area() < other.area()
+
+    def __le__(self, other):
+        """compares if area of self is less than or equal to other"""
+        return self.area() <= other.area()
+
+    def __ge__(self, other):
+        """compares if area of self is greater than or equal to other"""
+        return self.area() >= other.area()
+
+    def __ne__(self, other):
+        """compares if area of self is not equal to other"""
+        return self.area() != other.area()
+
+    def __eq__(self, other):
+        """compares if area of self is equal to other"""
+        return self.area() == other.area()
+
     def area(self):
         """
         area: calculates the area of a square
@@ -37,7 +61,3 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    def __repr__(self):
-        """represents the objects"""
-        return self.__size
