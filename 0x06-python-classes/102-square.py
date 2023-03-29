@@ -19,7 +19,7 @@ class Square:
 
     def __gt__(self, other):
         """compares if area of self is greater than other"""
-        return self.area() < other.area()
+        return self.area() > other.area()
 
     def __le__(self, other):
         """compares if area of self is less than or equal to other"""

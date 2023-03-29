@@ -23,6 +23,19 @@ class Square:
         """
         return (self.__size)
 
+    @property
+    def position(self):
+        """
+        position(getter): returns the value of attribute position
+        position(Setter): sets the value of size to new positon
+        
+        Args:
+            value:  a tuple with with two integers
+        raise TypeErro:
+            if value does not meet requirements
+        """
+        return (self.__position)
+
     @size.setter
     def size(self, value):
         if type(value) is not int:
@@ -30,14 +43,6 @@ class Square:
         if value < 0:
             raise ValueError("size must be >= 0")
         self.__size = value
-
-    @property
-    def position(self):
-        """
-        position(getter): returns the value of attribute position
-        position(Setter): sets the value of size to new positon
-        """
-        return (self.__position)
 
     @position.setter
     def position(self, value):
