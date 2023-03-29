@@ -7,5 +7,5 @@ print(my_square)
 
 print("--")
 
-my_square = Square(5, (4, 1))
+my_square = Square(0, (10, 10))
 print(my_square)

@@ -66,8 +66,7 @@ class Square:
         space_cnt = self.__position[0]
         square = ''
         if ssize == 0:
-            square += '\n'
-            return square
+            return
         for i in range(self.__position[1]):
             square += '\n'
         for i in range(ssize):
