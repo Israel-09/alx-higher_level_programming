@@ -14,5 +14,5 @@ class coordinate(object):
 
 ```
 
-#AUTHOR
+# AUTHOR
 - Inene Israel OLuwaniyi
