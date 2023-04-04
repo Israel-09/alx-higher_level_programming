@@ -81,3 +81,10 @@ class Rectangle:
             The string representaion of the rectangle object
         """
         return (self.print_rect())
+
+    def __repr__(self):
+        """official string representations of a rectangle object
+        Return:
+            The official string representaion of the rectangle object
+        """
+        return (f"Rectangle({self.__width}, {self.__height})")
