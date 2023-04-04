@@ -5,6 +5,7 @@
 class Rectangle:
     """a class that defines a square"""
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """
@@ -68,15 +69,15 @@ class Rectangle:
     def print_rect(self):
         """creates a string representing
         the shape of a rectangle"""
-        rectangle = ''
+        rectangle = []
         if self.__height == 0 or self.__width == 0:
-            return rectangle
+            return ''
         for i in range(self.__height):
             for j in range(self.__width):
-                rectangle += '#'
+                rectangle.append(str(self.print_symbol))
             if i < self.__height - 1:
-                rectangle += '\n'
-        return rectangle
+                rectangle.append('\n')
+        return ''.join(rectangle)
 
     def __del__(self):
         """prints a statement whenever an instance
