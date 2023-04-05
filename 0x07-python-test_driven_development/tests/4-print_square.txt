@@ -1,0 +1,37 @@
+==========================================================================
+Documentation on test cases of ``print_square`` module
+==========================================================================
+
+:: import ``print_square``
+	>>> print_square = __import__('4-print_square').print_square
+
+::case1:: size = 5
+	>>> print_square(5)
+	#####
+	#####
+	#####
+	#####
+	#####
+
+::case2:: size = 0
+	>>> print_square(0)
+
+::case3:: size is a negative value
+	>>> print_square(-2)
+	Traceback (most recent call last):
+	ValueError: size must be >= 0
+
+::case4:: size is a float
+	>>> print_square(3.4)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::case4:: size is a string
+	>>> print_square('School')
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::case4:: size is None
+	>>> print_square(None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer

@@ -1,0 +1,61 @@
+===================================================================================
+Domentation on test cases of ``say_my_name`` in ``3-say_my_name`` module
+===================================================================================
+``say_my_name`` prints the name it receives as input
+===================================================================================
+:: importing module
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+:: case - first_name and last_name input
+	>>> first_name = "Sam"
+	>>> last_name = "Melvin"
+	>>> say_my_name(first_name, last_name)
+	My name is Sam Melvin
+
+:: case - first_name only
+	>>> say_my_name(first_name)
+	My name is Sam 
+
+:: case - first value as None
+	>>> say_my_name(None, last_name)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::case - integer as first name
+	>>> say_my_name(9, last_name)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::case - empty string as first name
+	>>> say_my_name('', last_name)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::case - integer as first name
+	>>> say_my_name(9, last_name)
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+::case - empty string as last name
+	>>> say_my_name(first_name, '')
+	My name is Sam 
+
+::case - None as last_name
+	>>> say_my_name(first_name, None)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+:: case - last_name as integer
+	>>> say_my_name(first_name, 23)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+:: case - last_name as mixture of string and integer
+	>>> say_my_name(first_name, 'John23')
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+:: case - first_name as mixture of string and integer
+	>>> say_my_name('John34', 'Mark')
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
