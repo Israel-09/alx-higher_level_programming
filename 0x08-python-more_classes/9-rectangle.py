@@ -12,12 +12,13 @@ class Rectangle:
         __init__: initializes the properties of a square object
 
         Args:
-            size: size of the square
+            width (int): width of the rectangle
+            height (int): height of the rectangle
         """
         if type(width) is not int and type(height) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError("height must be an integer")
         if width < 0 and height < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
@@ -33,9 +34,9 @@ class Rectangle:
     @width.setter
     def width(self, value):
         if type(value) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError("value must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("value must be >= 0")
         self.__width = value
 
     @property
@@ -49,9 +50,9 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if type(value) is not int:
-            raise TypeError("size must be an integer")
+            raise TypeError("value must be an integer")
         if value < 0:
-            raise ValueError("size must be >= 0")
+            raise ValueError("value must be >= 0")
         self.__height = value
 
     def area(self):
@@ -118,8 +119,10 @@ class Rectangle:
 
         Returns: a square with size of size
         '''
-        New_obj = cls(size, size)
-        return New_obj
+        new_obj = cls()
+        new_obj.height = size
+        new_obj.width = size
+        return new_obj
 
     def __str__(self):
         """string representations of a rectangle object
