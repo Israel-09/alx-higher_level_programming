@@ -7,5 +7,6 @@ try:
     lc.last_name = "Snow"
 except Exception as e:
     print("[{}] {}".format(e.__class__.__name__, e))
-
+lc.test = 7
+lc.age = 15
 print(lc.__dict__)
