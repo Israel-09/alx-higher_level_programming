@@ -20,6 +20,10 @@ python documentation test for ``print_sorted`` method
 	>>> print(x)
 	[]
 
+:: print for empty list:
+	>>> x.print_sorted()
+	[]
+
 :: append a value to x and print
 	>>> x.append(3)
 	>>> print(x)
