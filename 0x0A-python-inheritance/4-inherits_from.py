@@ -15,4 +15,6 @@ def inherits_from(obj, a_class):
             inherited (directly or indirectly) from the specified class
             otherwise False.
     '''
-    return (issubclass(obj, a_class))
+    if type(obj) is a_class:
+        return False
+    return (issubclass(type(obj), a_class))
