@@ -47,7 +47,7 @@ python documentation test for ``print_sorted`` method
 :: add negative numbers
 	>>> x.append(-2)
 	>>> x.append(-1)
-	>>> x
+	>>> print(x)
 	[3, 2, 1, -2, -1]
 
 :: print sorted list with negative numbers
