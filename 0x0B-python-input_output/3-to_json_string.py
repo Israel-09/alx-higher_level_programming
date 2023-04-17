@@ -6,4 +6,13 @@ an object string
 
 
 def to_json_string(my_obj):
-    import JSON
+    '''
+    conver objects to json string
+
+    Args:
+        my_obj (str): python object
+    Return:
+        json string rep
+    '''
+    import json
+    return (json.dumps(my_obj))
