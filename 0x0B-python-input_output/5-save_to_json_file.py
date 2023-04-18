@@ -18,7 +18,7 @@ def save_to_json_file(my_obj, filename):
         the amount of characters written
     '''
     import json
-    json_string = json.dumps(my_obj)
     with open(filename, 'w', encoding='utf-8') as f:
+        json_string = json.dumps(my_obj)
         str_num = f.write(json_string)
     return (str_num)
