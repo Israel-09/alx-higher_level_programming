@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """module on a square class"""
-
-
 Rectangle = __import__("9-rectangle").Rectangle
+
 
 class Square(Rectangle):
     '''square class that inherits from Rectangle'''
