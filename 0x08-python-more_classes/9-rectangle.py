@@ -119,11 +119,11 @@ class Rectangle:
 
         Returns: a square with size of size
         '''
+        new_obj = cls(0, 0)
         if not isinstance(size, int):
             raise TypeError('width must be an integer')
         if size < 0:
             raise ValueError('width must be >= 0')
-        new_obj = cls()
         new_obj.height = size
         new_obj.width = size
         return new_obj
