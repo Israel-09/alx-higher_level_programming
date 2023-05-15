@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-file that containns a empty class
+module that contains a rectangle class
 '''
 
 
