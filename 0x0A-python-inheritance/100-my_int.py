@@ -8,7 +8,7 @@ class MyInt(int):
     def __init(self, real):
         '''MyInt class constructor'''
         self.real = real
-    
+
     def __eq__(self, other):
         '''changes the normal (==) operator'''
         return (self.real != other.real)
