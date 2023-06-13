@@ -1,0 +1,77 @@
+=====================================================================
+Test case for ``integer_validator`` class of ``7-basegeometry`` module
+=====================================================================
+
+
+::importing the class and creating an object
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+	>>> bg = BaseGeometry()
+
+
+:: testing for area method:
+	>>> bg.area()
+	Traceback (most recent call last):
+	Exception: area() is not implemented
+
+:: testing for integer_validator method with no arguement:
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+:: testing for integer_validator method with 1 arguement:
+	>>> bg.integer_validator("size")
+	Traceback (most recent call last):
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+::testing for vaue less than 0
+	>>> bg.integer_validator("size", -4)
+	Traceback (most recent call last):
+	ValueError: size must be greater than 0
+
+::testing for value equals 0
+	>>> bg.integer_validator("size", 0)
+	Traceback (most recent call last):
+	ValueError: size must be greater than 0
+
+::testing for value greater than 0
+	Traceback (most recent call last):
+	>>> bg.integer_validator("size", 6)
+
+
+::testing for  string
+	>>> bg.integer_validator("size", "nine")
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::testing for True
+	>>> bg.integer_validator("size", True)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::testing for float
+	>>> bg.integer_validator("size", 6.7)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::testing for None
+	>>> bg.integer_validator("size", None)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::testing for list
+	>>> nums = [range(10)]
+	>>> bg.integer_validator("size", nums)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::testing for sets
+	>>> nums = {3, 4, 2}
+	>>> bg.integer_validator("size", nums)
+	Traceback (most recent call last):
+	TypeError: size must be an integer
+
+::testing for tuples
+	>>> nums = (4, 5)
+	>>> bg.integer_validator("size", nums)
+	Traceback (most recent call last):
+	TypeError: size must be an integer

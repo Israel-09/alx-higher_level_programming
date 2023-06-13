@@ -1,0 +1,60 @@
+=====================================================
+python documentation test for ``print_sorted`` method
+====================================================
+
+:: importing ``MyList`` class
+	>>> MyList = __import__('1-my_list').MyList
+
+:: creating a object of ``MyList``
+	>>> x = MyList()
+
+:: check if x is an instance of list
+	>>> isinstance(x, list)
+	True
+
+:: check if x is an instance of MyList
+	>>> isinstance(x, MyList)
+	True
+
+:: print for empty list:
+	>>> print(x)
+	[]
+
+:: print for empty list:
+	>>> x.print_sorted()
+	[]
+
+:: append a value to x and print
+	>>> x.append(3)
+	>>> print(x)
+	[3]
+
+:: append more integers to the list
+	>>> x.append(2)
+	>>> x.append(4)
+	>>> x.append(1)
+	>>> x.append(5)
+	>>> x
+	[3, 2, 4, 1, 5]
+
+:: print sorted list x
+	>>> x.print_sorted()
+	[1, 2, 3, 4, 5]
+
+:: remove elements of x
+	>>> x.pop()
+	5
+	>>> x.remove(4)
+	>>> x
+	[3, 2, 1]
+
+:: add negative numbers
+	>>> x.append(-2)
+	>>> x.append(-1)
+	>>> print(x)
+	[3, 2, 1, -2, -1]
+
+:: print sorted list with negative numbers
+	>>> x.print_sorted()
+	[-2, -1, 1, 2, 3]
+
