@@ -3,6 +3,7 @@
 python script to read a file
 """
 
+
 def read_file(filename=""):
     '''read_file reads a file with name filename
     and prints it to stout
