@@ -1,16 +1,15 @@
 #!/usr/bin/python3
-"""
-python script to read a file
-"""
+'''
+python module on file i/o
+'''
 
 
 def read_file(filename=""):
-    '''read_file reads a file with name filename
-    and prints it to stout
+    ''' reads a text file (UTF8) and prints it to stdout
 
     Args:
-        filename (str): name of the file to be read
+        filename (str): name of the textfile
     '''
-    with open(filename, 'r', encoding='utf-8') as f:
+    with open(filename, encoding="utf-8") as f:
         text = f.read()
     print(text, end='')
