@@ -13,11 +13,18 @@ def append_after(filename="", search_string="", new_string=""):
     with open(filename, 'r', encoding='utf-8') as f:
         str_list = f.readlines()
 
-    i = 0
+    i = 1
+    index_list = []
     for line in str_list:
         if (line.find(search_string)) != -1:
-            str_list.insert(i + 1, new_string)
+            index_list.append(i);
         i += 1
+
+    i = 0
+    for index in index_list:
+        str_list.insert(index + i, new_string)
+        i += 1
+
     text = ''.join(str_list)
 
     with open(filename, 'w', encoding='utf-8') as f:
