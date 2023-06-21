@@ -84,6 +84,7 @@ class Rectangle(Base):
 
     @staticmethod
     def validator(attr, value):
+        '''validates the attributes'''
 
         if type(value) is not int:
             raise TypeError(f"{attr} must be an integer")
@@ -152,4 +153,5 @@ class Rectangle(Base):
     def __str__(self):
         '''string representation of the instances'''
         return "[rectangle] ({}) {}/{}- {}/{}".format(self.id, self.__x, self.__y,
-                                                self.__width, self.__height)
+                :wq#
+        self.__width, self.__height)
