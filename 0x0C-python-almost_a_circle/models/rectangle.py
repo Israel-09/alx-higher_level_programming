@@ -11,7 +11,7 @@ class Rectangle(Base):
         Args:
         width (int): the width of the rectangle
         height (int): the width of the rectangle
-        
+
         Raises:
             ValueError: if the arguement are of invalid value
             TypeError: if the arguements are of invalid types
@@ -134,14 +134,13 @@ class Rectangle(Base):
                 elif i == 4:
                     self.y = args[i]
         else:
-            for k,v in kwargs.items():
+            for k, v in kwargs.items():
                 setattr(self, k, v)
 
     def to_dictionary(self):
         '''returns a dictionary representation of a rectangle object
         '''
-
-        my_dict= {}
+        my_dict = {}
         my_dict['id'] = self.id
         my_dict['x'] = self.x
         my_dict['y'] = self.y
@@ -150,9 +149,9 @@ class Rectangle(Base):
 
         return (my_dict)
 
-
     def __str__(self):
         '''string representation of the instances'''
-        
-        return "[rectangle] ({}) {}/{}- {}/{}".format(self.id, self.__x, self.__y,
-        self.__width, self.__height)
+
+        return "[rectangle] ({}) {}/{}- {}/{}".format(self.id, self.__x,
+                                                      self.__y, self.__width,
+                                                      self.__height)
