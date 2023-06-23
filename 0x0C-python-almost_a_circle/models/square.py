@@ -43,6 +43,16 @@ class Square(Rectangle):
             for k, v in kwargs.items():
                 setattr(self, k, v)
 
+    def to_dictionary(self):
+        '''returns a dictionary of all object attributes'''
+        attr_dict = {}
+        attr_dict['id'] = self.id
+        attr_dict['size'] = self.__width
+        attr_dict['x'] = self.__x
+        attr_dict['y'] = self.__y
+
+        return (attr_dict)
+
     def __str__(self):
         '''string representation of square class'''
         return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
