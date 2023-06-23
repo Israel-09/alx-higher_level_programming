@@ -40,10 +40,10 @@ class Square(Rectangle):
                 elif i == 3:
                     self.y = args[i]
         else:
-            for k,v in kwargs.items():
+            for k, v in kwargs.items():
                 setattr(self, k, v)
-    
+
     def __str__(self):
         '''string representation of square class'''
-        return '[square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
-                                                self.width)
+        return '[Square] ({}) {}/{} - {}'.format(self.id, self.x, self.y,
+                                                 self.width)
