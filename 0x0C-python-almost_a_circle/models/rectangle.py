@@ -4,7 +4,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    '''Rectangle class'''
+    '''definition of a rectangle class'''
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''class constructor for rectangle instances
@@ -33,7 +33,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        '''setter method for width private attribute
+        '''
+        setter method for width private attribute
         Args:
             value (int): value to replace the width
         '''
@@ -152,6 +153,6 @@ class Rectangle(Base):
 
     def __str__(self):
         '''string representation of the instances'''
+        
         return "[rectangle] ({}) {}/{}- {}/{}".format(self.id, self.__x, self.__y,
-                :wq#
         self.__width, self.__height)
