@@ -47,9 +47,9 @@ class Square(Rectangle):
         '''returns a dictionary of all object attributes'''
         attr_dict = {}
         attr_dict['id'] = self.id
-        attr_dict['size'] = self.__width
-        attr_dict['x'] = self.__x
-        attr_dict['y'] = self.__y
+        attr_dict['size'] = self.width
+        attr_dict['x'] = self.x
+        attr_dict['y'] = self.y
 
         return (attr_dict)
 
