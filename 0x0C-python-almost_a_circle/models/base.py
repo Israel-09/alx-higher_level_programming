@@ -18,3 +18,25 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        '''returns the JSON string representation
+        of list_dictionary
+
+        Args:
+            list_dictionary (list): is alist of dictionary
+
+        Returns:
+            return the JSON representaion of list_dictionary
+        '''
+        from json import dumps
+
+
+        if list_dictionaries:
+            return dumps(list_dictionaries)
+        else:
+            return dumps([])
+        
+
+
