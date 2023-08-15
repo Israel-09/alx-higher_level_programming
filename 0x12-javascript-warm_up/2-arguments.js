@@ -1,8 +1,9 @@
 #!/usr/bin/node
-import { argv } from 'node:process';
 
-if (argv[2]) {
-  if (argv[3]) {
+const arg1 = process.argv[2];
+const arg2 = process.argv[3];
+if (arg1) {
+  if (arg2) {
     console.log('Arguments found');
   } else {
     console.log('Argument found');
