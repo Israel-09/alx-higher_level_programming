@@ -8,7 +8,7 @@ if (parseInt(size)) {
     let j = 0;
 
     while (j < size) {
-      str += 'X';
+      str = str + 'X';
       j++;
     }
     console.log(str);
