@@ -8,8 +8,8 @@ if __name__ == '__main__':
                          db=argv[3], host='localhost',
                          port=3306)
     cur = db.cursor()
-    cur.execute(f"""SELECT id, name FROM states
-            WHERE name='{argv[4]}' ORDER BY id;""")
+    cur.execute("""SELECT id, name FROM states
+            WHERE name='{}' ORDER BY id;""".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(f"{row}")
