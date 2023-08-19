@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''select specific column in database'''
 
-if __name__  == '__main__':
+if __name__ == '__main__':
     import MySQLdb
     from sys import argv
     db = MySQLdb.connect(user=argv[1], password=argv[2],
