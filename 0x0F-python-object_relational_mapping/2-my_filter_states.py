@@ -9,7 +9,7 @@ if __name__ == '__main__':
                          port=3306)
     cur = db.cursor()
     cur.execute("""SELECT id, name FROM states
-            WHERE name='{}' ORDER BY id;""".format(argv[4]))
+            WHERE name = BINARY '{}' ORDER BY id;""".format(argv[4]))
     rows = cur.fetchall()
     for row in rows:
         print(f"{row}")
