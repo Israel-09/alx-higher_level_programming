@@ -8,7 +8,9 @@ if __name__ == '__main__':
                          db=argv[3], host='localhost',
                          port=3306)
     cur = db.cursor()
-    cur.execute("""SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id;""")
+    cur.execute(
+                """SELECT id, name FROM states WHERE name LIKE
+                BINARY 'N%' ORDER BY id;""")
     rows = cur.fetchall()
     for row in rows:
         print(f"{row}")
