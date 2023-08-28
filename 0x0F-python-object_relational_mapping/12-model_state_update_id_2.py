@@ -13,7 +13,8 @@ if __name__ == "__main__":
 
     session = Session(engine)
 
-    for state in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+    row = session.query(State).filter_by(id=2).one()
+    row.name = 'New Mexico'
+    session.commit()
 
     session.close()
