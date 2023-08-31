@@ -19,15 +19,15 @@ class Rectangle {
     }
     console.log(x);
   }
-  
+
   // Method
   rotate () {
     const x = this.height;
     this.height = this.width;
     this.width = x;
   }
-  
-  //Method
+
+  // Method
   double () {
     this.height *= 2;
     this.width *= 2;
