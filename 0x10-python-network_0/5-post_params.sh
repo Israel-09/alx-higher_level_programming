@@ -5,4 +5,4 @@
 var1="email=test@gmail.com"
 var2="subject=I will always be here for PLD"
 
-curl -X POST -d "$var1&$var2" "$1";
+curl -sX POST -d "$var1&$var2" "$1";
