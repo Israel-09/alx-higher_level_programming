@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-#p
-curl -sI "$1" | grep Allow | cut -c 8-
+# displays the methods allowed
+curl -sI "$1" | grep 'Allow' | cut -c 8-
