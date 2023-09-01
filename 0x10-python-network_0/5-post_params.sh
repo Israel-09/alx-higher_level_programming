@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #a Bash script that takes in a URL as an argument, sends a POST
 # request to the URL.
 
