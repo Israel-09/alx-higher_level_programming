@@ -20,6 +20,18 @@ class Base:
             self.id = Base.__nb_objects
 
     @staticmethod
+    def from_json_string(json_string):
+        '''converts json string to the array of dictionary'''
+        from json import loads
+
+        if json_string:
+            dict_array = loads(json_string)
+            return (dict_array)
+        else:
+            return ([])
+
+
+    @staticmethod
     def to_json_string(list_dictionaries):
         '''returns the JSON string representation
         of list_dictionary
@@ -47,11 +59,21 @@ class Base:
         storage = f'{cls.__name__}.json'
 
         list_dictionaries = []
-        for obj in list_objs:
-            obj_dict = obj.to_dictionary()
-            list_dictionaries.append(obj_dict)
+
+        if list_objs:
+            for obj in list_objs:
+                obj_dict = obj.to_dictionary()
+                list_dictionaries.append(obj_dict)
 
         str_dict = Base.to_json_string(list_dictionaries)
 
         with open(storage, 'w', encoding='utf-8') as f:
             f.write(str_dict)
+
+    @classmethod
+    def create(cls, **dictionary):
+        '''returns an instance with all attributes already set'''
+
+        dummy = cls(1, 1 , 1, 1)
+        dummy.update(**dictionary)
+        return (dummy)

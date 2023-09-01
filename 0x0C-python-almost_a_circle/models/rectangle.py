@@ -133,9 +133,11 @@ class Rectangle(Base):
                     self.x = args[i]
                 elif i == 4:
                     self.y = args[i]
-        else:
+            return
+        elif kwargs:
             for k, v in kwargs.items():
                 setattr(self, k, v)
+            return
 
     def to_dictionary(self):
         '''returns a dictionary representation of a rectangle object
