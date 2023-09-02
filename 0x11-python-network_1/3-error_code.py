@@ -1,14 +1,14 @@
 #!/usr/bin/python3
-'''sends a request to the URL and displays the
-value of the X-Request-Id'''
-import urllib.request
-import sys
+'''sends a request to the URL and displays
+the body of the response'''
 
 if __name__ == '__main__':
-
-    req = urllib.request.Request(sys.argv[1])
+    import sys
+    import urllib.request
     try:
-        page = urllib.request.urlopen(req).read()
-        print('{}'.format(page.decode('utf-8')))
+        req = urllib.request.Request(sys.argv[1])
+        with urllib.request.urlopen(req) as response:
+            body = response.read().decode('utf-8')
+            print('{}'.format(body))
     except urllib.error.HTTPError as e:
-        print('Error code: {}'.format(e.getcode()))
+        print('Error code: {}'.format(e.code))
