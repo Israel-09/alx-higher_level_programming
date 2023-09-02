@@ -7,9 +7,7 @@ if __name__ == '__main__':
     import requests
 
     headers = {'Accept': 'application/vnd.github+json',
-               'Authorization':
-               'Bearer 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',
-               'X-GitHub-Api-Version': '2022-11-28',
+               'X-GitHub-Api-Version': '2022-11-28'
                }
     url = 'https://api.github.com/repos/{}/{}/commits'.\
           format(sys.argv[2], sys.argv[1])
