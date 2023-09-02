@@ -20,5 +20,5 @@ if __name__ == '__main__':
         else:
             print('[{}] {}'.format(json_obj.get('id'),
                                    json_obj.get('name')))
-    except simplejson.errors.JSONDecodeError:
+    except requests.exceptions.JSONDecodeError:
         print('Not a valid JSON')
