@@ -20,9 +20,7 @@ if __name__ == '__main__':
         else:
             count = 0
             for json_obj in json_arr:
-                url = json_obj.get('author').get('url')
-                user = requests.get(url, headers=headers)
-                name = user.json().get('name')
+                name = json_obj.get('commit').get('author').get('name')
                 if count < 10:
                     print('{}: {}'.format(json_obj.get('sha'), name))
                 else:
