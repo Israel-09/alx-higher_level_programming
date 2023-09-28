@@ -19,13 +19,13 @@ request(url, function (error, response, body) {
   if (error) {
     console.error(error);
   } else {
-    const completedDict = {}
+    const completedDict = {};
     for (let i = 1; i < 11; i++) {
       const completed = getCompleted(body, i);
       if (completed > 0) {
-         completedDict[i] = completed;
+        completedDict[i] = completed;
       }
     }
-    console.log(completedDict)
+    console.log(completedDict);
   }
 });
