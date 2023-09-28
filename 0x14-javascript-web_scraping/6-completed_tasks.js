@@ -18,6 +18,7 @@ const url = process.argv[2];
 request(url, function (error, response, body) {
   if (error) {
     console.error(error);
+    return;
   } else {
     const completedDict = {};
     for (let i = 1; i < 11; i++) {
